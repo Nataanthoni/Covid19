@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "841236159727",
+    "firebase_url": "https://covid19-723c3.firebaseio.com",
+    "project_id": "covid19-723c3",
+    "storage_bucket": "covid19-723c3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:841236159727:android:a22f2bf79a49887aa14f1a",
+        "android_client_info": {
+          "package_name": "com.kweracodes.covid19"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "841236159727-fefj4uhe8dscj22nnb5jr8j5v71kue7j.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.kweracodes.covid19",
+            "certificate_hash": "8dc2198d1e05bfc915517802af51d7aec021fe45"
+          }
+        },
+        {
+          "client_id": "841236159727-c28g7r10j756rmm0bh7haoj3t7efnv6q.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBmjl4axIC3PZM_RR3pSzltFjdIB_ujAF8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "841236159727-c28g7r10j756rmm0bh7haoj3t7efnv6q.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
