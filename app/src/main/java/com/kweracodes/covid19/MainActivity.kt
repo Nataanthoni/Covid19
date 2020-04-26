@@ -28,6 +28,11 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+        //Open Global Statistics Activity
+        confirmedCasess.setOnClickListener {
+            val intent = Intent(this, UgandaStatistics:: class.java)
+            startActivity(intent)
+        }
         //Return details
         RetrofitClient.instance.getUganda()
             .enqueue(object : Callback<Uganda> {

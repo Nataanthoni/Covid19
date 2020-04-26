@@ -13,26 +13,30 @@
         android:roundIcon="@drawable/ic_logo"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GlobalStatistics"
-            android:label="Global Statistics"
-            android:parentActivityName=".MainActivity"/>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".Welcome"
-            android:label=""
-            android:theme="@style/MyIntroTheme"/>
-        <activity android:name=".VerifyPhone"
-            android:label="Verify Phone"/>
 
         <activity
+            android:name=".GlobalStatistics"
+            android:label="Global Statistics"
+            android:parentActivityName=".MainActivity" />
+        <activity android:name=".MainActivity" />
+        <activity
+            android:name=".Welcome"
+            android:label=""
+            android:theme="@style/MyIntroTheme" />
+        <activity
+            android:name=".VerifyPhone"
+            android:label="Verify Phone" />
+        <activity
             android:name=".SplashActivity"
-            android:theme="@style/MyIntroTheme"
-            android:label="Covid19">
+            android:label="Covid19"
+            android:theme="@style/MyIntroTheme">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".UgandaStatistics" />
+
     </application>
 
 </manifest>
