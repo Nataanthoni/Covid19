@@ -599,28 +599,26 @@
         </LinearLayout>
 
 
-<!--        <LinearLayout-->
-<!--            android:id="@+id/partner"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="match_parent"-->
-<!--            android:layout_margin="15dp"-->
-<!--            android:background="@color/colorPrimary"-->
-<!--            android:gravity="center"-->
-<!--            android:orientation="horizontal">-->
+        <LinearLayout
+            android:id="@+id/partner"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="15dp"
+            android:background="@drawable/bg_rounded_primary"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-<!--            <TextView-->
-<!--                android:layout_width="match_parent"-->
-<!--                android:layout_height="wrap_content"-->
-<!--                android:layout_margin="10dp"-->
-<!--                android:gravity="center"-->
-<!--                android:padding="5dp"-->
-<!--                android:text="Partner with us"-->
-<!--                android:textColor="#ffffff"-->
-<!--                android:textSize="20sp"-->
-<!--                android:textStyle="bold" />-->
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:padding="10dp"
+                android:text="REPORT A CASE"
+                android:textColor="#ffffff"
+                android:textSize="18sp" />
 
 
-<!--        </LinearLayout>-->
+        </LinearLayout>
 
 
         <!--        //Last double buttons-->

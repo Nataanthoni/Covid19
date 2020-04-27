@@ -1,5 +1,7 @@
 package com.kweracodes.covid19
 
+import android.app.SearchManager
+import android.content.Context
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -7,7 +9,11 @@ import android.view.Menu
 import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
+import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.widget.SearchView
+import androidx.core.content.ContextCompat
+import androidx.core.view.MenuItemCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.kweracodes.covid19.adapters.CountriesAdapter
@@ -15,9 +21,11 @@ import com.kweracodes.covid19.models.allcountries.Countries
 import com.kweracodes.covid19.models.allcountries.CountriesItem
 import com.kweracodes.covid19.models.global.Global
 import kotlinx.android.synthetic.main.activity_global_statistics.*
+import org.jetbrains.anko.searchView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+import java.util.Locale.filter
 
 class GlobalStatistics : AppCompatActivity() {
 
@@ -53,14 +61,17 @@ class GlobalStatistics : AppCompatActivity() {
 
         //Return all countries details
         RetrofitClient.instance.getAllCountries()
-            .enqueue(object : Callback <ArrayList<CountriesItem>> {
+            .enqueue(object : Callback<ArrayList<CountriesItem>> {
                 override fun onFailure(call: Call<ArrayList<CountriesItem>>, t: Throwable) {
 
                     Toast.makeText(this@GlobalStatistics, t.message, Toast.LENGTH_SHORT)
                         .show()
                 }
 
-                override fun onResponse(call: Call<ArrayList<CountriesItem>>, response: Response<ArrayList<CountriesItem>>) {
+                override fun onResponse(
+                    call: Call<ArrayList<CountriesItem>>,
+                    response: Response<ArrayList<CountriesItem>>
+                ) {
 
                     if (response.isSuccessful) {
 
@@ -80,26 +91,53 @@ class GlobalStatistics : AppCompatActivity() {
 
             })
 
+//        Sets actionbar title
+//        supportActionBar?.title = "Name here"
+//        Removes the default elevation shaddow
+//        supportActionBar?.elevation = 0.00F
+
     }
 
     //handles the option select menu icon
-    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
 
-        val inflater: MenuInflater = menuInflater
-        inflater.inflate(R.menu.select_option_menu, menu)
+    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+        menuInflater.inflate(R.menu.search_menu, menu)
+        val searchItem: MenuItem = menu.findItem(R.id.action_search)
+        if (searchItem != null) {
+            val searchView = MenuItemCompat.getActionView(searchItem) as SearchView
+            searchView.setOnCloseListener { true }
+
+            val searchPlate =
+                searchView.findViewById(androidx.appcompat.R.id.search_src_text) as EditText
+            searchPlate.hint = "Search... "
+            val searchPlateView: View =
+                searchView.findViewById(androidx.appcompat.R.id.search_plate)
+            searchPlateView.setBackgroundColor(
+                ContextCompat.getColor(
+                    this,
+                    android.R.color.transparent
+                )
+            )
+
+            searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                override fun onQueryTextSubmit(query: String?): Boolean {// do your logic here                Toast.makeText(applicationContext, query, Toast.LENGTH_SHORT).show()
+                    return false
+                }
+
+                override fun onQueryTextChange(newText: String?): Boolean {
+//
+//                    adapter.filter.filter(newText)
+                    return false
+                }
+            })
+
+//            val searchManager =
+//                getSystemService(Context.SEARCH_SERVICE) as SearchManager
+//            searchView.setSearchableInfo(searchManager.getSearchableInfo(componentName))
+
+        }
         return super.onCreateOptionsMenu(menu)
 
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem?): Boolean {
-        val id = item!!.itemId
-        if (id == R.id.action_sort) {
-
-            SweetAlertDialog(this@GlobalStatistics)
-                .setTitleText("Sorry, this section is not yet working.")
-                .show()
-        }
-        return super.onOptionsItemSelected(item)
     }
 
 }
