@@ -54,7 +54,7 @@
                             android:drawableRight="@drawable/plus"
                             android:drawableTint="@color/white"
                             android:padding="1dp"
-                            android:text="65"
+                            android:text="69275"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="16dp" />
@@ -92,7 +92,7 @@
                             android:layout_height="wrap_content"
                             android:drawableRight="@drawable/plus"
                             android:padding="1dp"
-                            android:text="65"
+                            android:text="2082665"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="20dp" />
@@ -132,7 +132,7 @@
                             android:drawableRight="@drawable/plus"
                             android:drawableTint="@color/white"
                             android:padding="1dp"
-                            android:text="65"
+                            android:text="19265"
                             android:textAlignment="center"
                             android:textColor="@color/white"
                             android:textSize="16dp" />
@@ -168,11 +168,25 @@
 
         </LinearLayout>
 
-        <ProgressBar
+        <LinearLayout
             android:id="@+id/countriesprogressbar"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center" />
+            android:orientation="vertical"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="17sp"
+                android:textColor="@color/colorPrimary"
+                android:text="Loading global data..."/>
+            <ProgressBar
+                android:layout_width="30dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+        </LinearLayout>
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/countriesRecycler"

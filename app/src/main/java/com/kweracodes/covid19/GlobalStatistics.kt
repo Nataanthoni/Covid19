@@ -125,8 +125,8 @@ class GlobalStatistics : AppCompatActivity() {
                 }
 
                 override fun onQueryTextChange(newText: String?): Boolean {
-//
-//                    adapter.filter.filter(newText)
+
+                    //adapter.filter.filter(newText)
                     return false
                 }
             })

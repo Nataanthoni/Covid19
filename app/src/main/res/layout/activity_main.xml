@@ -153,12 +153,12 @@
                     android:layout_margin="10dp"
                     android:background="@drawable/bg_rounded_white"
                     android:gravity="center"
-                    android:padding="6dp"
+                    android:padding="10dp"
                     android:paddingStart="35dp"
                     android:paddingEnd="35dp"
                     android:text="SEE GLOBAL STATISTICS"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="12sp" />
+                    android:textSize="14sp" />
 
             </LinearLayout>
 
