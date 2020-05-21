@@ -9,7 +9,7 @@ data class CountriesItem(
     @SerializedName("cases")
     val cases: Int, // 28
     @SerializedName("casesPerOneMillion")
-    val casesPerOneMillion: Int, // 2
+    val casesPerOneMillion: Double, // 2
     @SerializedName("continent")
     val continent: String, // Africa
     @SerializedName("country")
@@ -21,13 +21,13 @@ data class CountriesItem(
     @SerializedName("deaths")
     val deaths: Int, // 4
     @SerializedName("deathsPerOneMillion")
-    val deathsPerOneMillion: Int, // 0
+    val deathsPerOneMillion: Double, // 0
     @SerializedName("recovered")
     val recovered: Int, // 2
     @SerializedName("tests")
     val tests: Int, // 4990
     @SerializedName("testsPerOneMillion")
-    val testsPerOneMillion: Int, // 336
+    val testsPerOneMillion: Double, // 336
     @SerializedName("todayCases")
     val todayCases: Int, // 0
     @SerializedName("todayDeaths")

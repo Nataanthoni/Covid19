@@ -11,13 +11,13 @@ data class Global(
     @SerializedName("cases")
     val cases: Int, // 2648317
     @SerializedName("casesPerOneMillion")
-    val casesPerOneMillion: Int, // 340
+    val casesPerOneMillion: Double, // 340
     @SerializedName("critical")
     val critical: Int, // 58202
     @SerializedName("deaths")
     val deaths: Int, // 184614
     @SerializedName("deathsPerOneMillion")
-    val deathsPerOneMillion: Int, // 23
+    val deathsPerOneMillion: Double, // 23
     @SerializedName("recovered")
     val recovered: Int, // 724242
     @SerializedName("tests")
