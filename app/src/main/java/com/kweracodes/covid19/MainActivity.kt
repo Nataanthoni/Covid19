@@ -17,10 +17,10 @@ import retrofit2.Response
 
 class MainActivity : AppCompatActivity() {
 
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //RetrofitClient.setContext(this@MainActivity)
 
         //Open Global Statistics Activity
         seeGlobalStat.setOnClickListener {
@@ -35,8 +35,10 @@ class MainActivity : AppCompatActivity() {
         }
         //Return details
         RetrofitClient.instance.getUganda()
+
             .enqueue(object : Callback<Uganda> {
                 override fun onFailure(call: Call<Uganda>, t: Throwable) {
+
 
                     Toast.makeText(this@MainActivity, t.message, Toast.LENGTH_SHORT)
                         .show()
@@ -54,6 +56,7 @@ class MainActivity : AppCompatActivity() {
                         SweetAlertDialog(this@MainActivity, SweetAlertDialog.ERROR_TYPE)
                             .setTitleText("Response Error")
                             .show()
+
                     }
                 }
 

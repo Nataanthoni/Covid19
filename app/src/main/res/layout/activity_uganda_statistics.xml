@@ -35,9 +35,13 @@
 
             <TextView
                 android:id="@+id/country_name"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:padding="0sp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="4sp"
+                android:text="Uganda"
+                android:textSize="20sp"
+                android:textColor="@color/colorPrimary"
+                android:textAlignment="center"
                 android:src="@drawable/ic_logo" />
 
             <LinearLayout
@@ -98,7 +102,7 @@
                     android:layout_height="wrap_content"
                     android:drawableTint="@color/colorAccent"
                     android:padding="1dp"
-                    android:text="Confirmed Cases: "
+                    android:text="Recovery Cases: "
                     android:textAlignment="center"
                     android:textColor="@color/colorAccent"
                     android:textSize="16dp" />

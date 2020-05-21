@@ -1,31 +1,24 @@
 package com.kweracodes.covid19
 
-import android.app.SearchManager
-import android.content.Context
-import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
-import android.view.MenuInflater
 import android.view.MenuItem
 import android.view.View
 import android.widget.EditText
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import androidx.core.content.ContextCompat
 import androidx.core.view.MenuItemCompat
 import androidx.recyclerview.widget.LinearLayoutManager
 import cn.pedant.SweetAlert.SweetAlertDialog
 import com.kweracodes.covid19.adapters.CountriesAdapter
-import com.kweracodes.covid19.models.allcountries.Countries
 import com.kweracodes.covid19.models.allcountries.CountriesItem
 import com.kweracodes.covid19.models.global.Global
 import kotlinx.android.synthetic.main.activity_global_statistics.*
-import org.jetbrains.anko.searchView
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
-import java.util.Locale.filter
 
 class GlobalStatistics : AppCompatActivity() {
 

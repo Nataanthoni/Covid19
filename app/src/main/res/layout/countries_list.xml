@@ -28,8 +28,8 @@
 
             <ImageView
                 android:id="@+id/country_flag"
-                android:layout_width="40dp"
-                android:layout_height="40dp"
+                android:layout_width="50dp"
+                android:layout_height="30dp"
                 android:padding="0sp"
                 android:src="@drawable/ic_logo" />
 
@@ -64,7 +64,7 @@
                         android:drawableRight="@drawable/plus"
                         android:drawableTint="@color/colorAccent"
                         android:padding="1dp"
-                        android:text="65"
+                        android:text="45"
                         android:textAlignment="center"
                         android:textColor="@color/colorAccent"
                         android:textSize="16dp" />
@@ -102,7 +102,7 @@
                         android:layout_height="wrap_content"
                         android:drawableRight="@drawable/plus"
                         android:padding="1dp"
-                        android:text="65"
+                        android:text="75"
                         android:textAlignment="center"
                         android:textColor="@color/colorAccent"
                         android:textSize="20dp" />
@@ -142,7 +142,7 @@
                         android:drawableRight="@drawable/plus"
                         android:drawableTint="@color/colorAccent"
                         android:padding="1dp"
-                        android:text="65"
+                        android:text="0"
                         android:textAlignment="center"
                         android:textColor="@color/colorAccent"
                         android:textSize="16dp" />
